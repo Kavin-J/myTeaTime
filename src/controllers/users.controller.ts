@@ -9,11 +9,11 @@ export class UserController {
   public getUsers = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const findAllUsersData: User[] = await this.user.findAllUser();
-      // const users = findAllUsersData.map(user=>{
-      //   const {password , ...userWithoutPassword} = user
-      //   return userWithoutPassword
-      // })
-      res.status(200).json({ data:findAllUsersData, message: 'findAll' });
+      const users = findAllUsersData.map(user => {
+        const { password, ...userWithoutPassword } = user;
+        return userWithoutPassword;
+      });
+      res.status(200).json({ data: users, message: 'findAll' });
     } catch (error) {
       next(error);
     }

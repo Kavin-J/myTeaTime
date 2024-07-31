@@ -1,9 +1,9 @@
 import { connect, Connection, ConnectOptions, set } from 'mongoose';
-import { NODE_ENV, DB_HOST, DB_PORT, DB_DATABASE } from '@config';
+import { NODE_ENV, DB_HOST, DB_DATABASE, DB_USER, DB_PASSWORD, DB_OPTIONS } from '@config';
 
 export const dbConnection = async () => {
   const dbConfig = {
-    url: `mongodb://${DB_HOST}:${DB_PORT}/${DB_DATABASE}`,
+    url: `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}?${DB_OPTIONS}`,
   };
 
   if (NODE_ENV !== 'production') {

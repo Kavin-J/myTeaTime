@@ -15,6 +15,7 @@ interface DeleteResult {
 export class UserService {
   public async findAllUser(): Promise<User[]> {
     const users: User[] = await UserModel.find().lean();
+    console.log(users);
     return users;
   }
 
