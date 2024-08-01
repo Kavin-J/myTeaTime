@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Users [PUT] /users/:id response Update User 1`] = `
+Object {
+  "data": Object {
+    "__v": 0,
+    "_id": "66a364111cea22a13158b21a",
+    "createdAt": "2024-07-26T08:53:37.397Z",
+    "department": "TSS",
+    "email": "test@email.com",
+    "emp_id": "A702",
+    "name": "Wit Wa",
+    "password": "$2b$10$91HrbCl2uVqarbjWBXnxpuAuzuEdQbTsi/XZouyhD7DjpFL.d4LeC",
+    "profile_picture": "",
+    "role": "LEADER",
+    "subdepartment": "GP/MANUAL",
+    "updatedAt": "2024-07-26T08:53:37.487Z",
+  },
+  "message": "updated",
+}
+`;
